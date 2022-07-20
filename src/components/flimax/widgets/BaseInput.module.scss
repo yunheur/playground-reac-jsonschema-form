@@ -1,0 +1,53 @@
+@import "../variables.scss";
+
+.field-input-group {
+  &--default {
+    position: relative;
+
+    .form-control {
+      // input
+      width: 100%;
+      border: 1px solid $color-gray-200;
+      box-sizing: border-box;
+      border-radius: 8px;
+      // text
+      padding: 15px 16px 14px;
+      font-size: 16px;
+      line-height: 29px;
+      color: $color-gray-900;
+  
+      &::placeholder {
+        color: $color-gray-400;
+      }
+  
+      &.active {
+        padding: 21px 16px 8px;
+      }
+      &:focus {
+        border-color: red;
+      }
+    }
+  
+    .placeholder {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(16px, -50%);
+      color: $color-gray-500;
+      font-size: 16px;
+      line-height: 29px;
+      transition: all 0.2s ease-in-out;
+      cursor: text;
+  
+      &.active {
+        font-size: 12px;
+        line-height: 22px;
+        color: $color-gray-400;
+        top: 0;
+        transform: translate(16px, 5px);
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+}

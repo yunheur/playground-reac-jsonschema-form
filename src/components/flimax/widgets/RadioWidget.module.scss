@@ -1,0 +1,68 @@
+@import "../variables.scss";
+
+.field-radio-group {
+  &--default {
+    .inner-radio {
+      input {
+        position: relative;
+        margin: 0;
+        vertical-align: middle;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        background: #ffffff;
+        border: 1px solid $color-gray-200;
+        box-sizing: border-box;
+        border-radius: 50%;
+        appearance: none;
+        position: relative;
+        margin-right: 8px;
+  
+        &:checked {
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-color: $color-light-blue-500;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+  
+        &:focus {
+          outline: none;
+        }
+  
+        &:disabled {
+          border-color: $color-gray-100;
+  
+          &:after {
+            background-color: $color-gray-100;
+          }
+        }
+      }
+      span {
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 29px;
+        color: $color-gray-500;
+      }
+    }
+
+    .radio {
+        label {
+
+        }
+    }
+
+    .radio-inline {
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  }
+}
